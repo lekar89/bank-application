@@ -52,15 +52,27 @@ public class Client {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null || obj.getClass() != this.getClass())
-            return false;
-        Client equalsClient = (Client) obj;
-        if (equalsClient.getName().equals(this.getName()) && equalsClient.getGender().equals(this.getGender())) {
-            return true;
-        }
-        return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Client client = (Client) o;
+
+        if (!name.equals(client.name)) return false;
+        return gender == client.gender;
     }
+
+
+    //    @Override
+//    public boolean equals(Object obj) {
+//        if (obj == null || obj.getClass() != this.getClass())
+//            return false;
+//        Client equalsClient = (Client) obj;
+//        if (equalsClient.getName().equals(this.getName()) && equalsClient.getGender().equals(this.getGender())) {
+//            return true;
+//        }
+//        return false;
+//    }
 
     @Override
     public int hashCode() {

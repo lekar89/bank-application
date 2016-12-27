@@ -6,11 +6,11 @@ public class Main {
     public static void main(String[] args) {
         Bank privat = new Bank();
 
-        Client yanukovich = new Client("Виктор Фёдорович Янукович", Client.Gender.male);
-        Client juniorYanukovich = new Client("Виктор Викторович Януковичч", Client.Gender.male);
-        Client luda = new Client("Людмила Александровна Янукович", Client.Gender.female);
-        Client azyrov = new Client("Николай Янович Азаров", Client.Gender.male);
-        Client yula = new Client("Юлия Владимировна Тимошенко", Client.Gender.female);
+        Client yanukovich = new Client("Виктор Фёдорович Янукович", Client.Gender.MALE);
+        Client juniorYanukovich = new Client("Виктор Викторович Януковичч", Client.Gender.MALE);
+        Client luda = new Client("Людмила Александровна Янукович", Client.Gender.FEMALE);
+        Client azyrov = new Client("Николай Янович Азаров", Client.Gender.MALE);
+        Client yula = new Client("Юлия Владимировна Тимошенко", Client.Gender.FEMALE);
 
         privat.addClient(yanukovich);
         privat.addClient(juniorYanukovich);

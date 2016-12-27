@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Bank {
     private ArrayList<Client> clients;
@@ -10,6 +11,7 @@ public class Bank {
 
     public ArrayList<Client> getClients() {
         return clients;
+       //return  Collections.unmodifiableCollection(clients);
     }
 
      String getClientInf(String name) {

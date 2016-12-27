@@ -7,7 +7,7 @@ public class Client {
     private ArrayList<AbstractAccount> deposits;
     private AbstractAccount activeDeposit;
     Gender gender;
-    enum Gender { male,female }
+    enum Gender {MALE, FEMALE}
 
 
     public Client(String name, Gender gender) {

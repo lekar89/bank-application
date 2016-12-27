@@ -3,14 +3,17 @@ import java.util.ArrayList;
 
 public class Client {
     private String name;
-    private String gender;
+    //private String gender;
     private ArrayList<AbstractAccount> deposits;
     private AbstractAccount activeDeposit;
-    // enum gender { "male","female"}
+    Gender gender;
+    enum Gender { male,female }
 
-    public Client(String name, String gender) {
+
+    public Client(String name, Gender gender) {
         this.name = name;
-        this.gender = gender;
+        this.gender=gender;
+
     }
 
     public void addDeposit(AbstractAccount newDeposit) {
@@ -61,17 +64,25 @@ public class Client {
 
     @Override
     public int hashCode() {
-        int res = 0;
-        char[] tmpGender = gender.toCharArray();
-        char[] tmpName = name.toCharArray();
-        for (int i = 0; i < tmpName.length; i++) {
-            res += (int) tmpName[i];
-        }
-        for (int i = 0; i < tmpGender.length; i++) {
-            res += (int) tmpGender[i];
-        }
-        return res;
+        int result = name.hashCode();
+        result = 31 * result + gender.hashCode();
+        return result;
     }
+
+
+    //    @Override
+//    public int hashCode() {
+//        int res = 0;
+//        char[] tmpGender = gender.toCharArray();
+//        char[] tmpName = name.toCharArray();
+//        for (int i = 0; i < tmpName.length; i++) {
+//            res += (int) tmpName[i];
+//        }
+//        for (int i = 0; i < tmpGender.length; i++) {
+//            res += (int) tmpGender[i];
+//        }
+//        return res;
+//    }
 
 
     public String getName() {
@@ -82,11 +93,12 @@ public class Client {
         this.name = name;
     }
 
-    public String getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
+
         this.gender = gender;
     }
 

@@ -8,9 +8,9 @@ public class Main {
 
         Client yanukovich = new Client("Виктор Фёдорович Янукович", Client.Gender.male);
         Client juniorYanukovich = new Client("Виктор Викторович Януковичч", Client.Gender.male);
-        Client luda = new Client("Людмила Александровна Янукович", Client.Gender.male);
+        Client luda = new Client("Людмила Александровна Янукович", Client.Gender.female);
         Client azyrov = new Client("Николай Янович Азаров", Client.Gender.male);
-        Client yula = new Client("Юлия Владимировна Тимошенко", Client.Gender.male);
+        Client yula = new Client("Юлия Владимировна Тимошенко", Client.Gender.female);
 
         privat.addClient(yanukovich);
         privat.addClient(juniorYanukovich);

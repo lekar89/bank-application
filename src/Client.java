@@ -4,8 +4,8 @@ import java.util.ArrayList;
 public class Client {
     private String name;
     //private String gender;
-    private ArrayList<AbstractAccount> deposits;
-    private AbstractAccount activeDeposit;
+    private ArrayList<Account> deposits;
+    private Account activeDeposit;
     Gender gender;
     enum Gender {MALE, FEMALE}
 
@@ -16,9 +16,9 @@ public class Client {
 
     }
 
-    public void addDeposit(AbstractAccount newDeposit) {
+    public void addDeposit(Account newDeposit) {
         if (deposits == null) {
-            deposits = new ArrayList<AbstractAccount>();
+            deposits = new ArrayList<Account>();
             deposits.add(newDeposit);
             activeDeposit = newDeposit;
         }
@@ -26,7 +26,7 @@ public class Client {
     }
 
 
-    public void makeActive(AbstractAccount deposit) {
+    public void makeActive(Account deposit) {
         if (deposits == null) return;
         if (deposits.contains(deposit)) activeDeposit = deposit;
 
@@ -34,7 +34,7 @@ public class Client {
 
     public double getTotalBalance() {
         double res = 0;
-        for (AbstractAccount deposit : deposits
+        for (Account deposit : deposits
                 ) {
             res += deposit.getBalance();
         }
@@ -44,7 +44,7 @@ public class Client {
     @Override
     public String toString() {
         String res = getName() + " " + getGender() + " ";
-        for (AbstractAccount deposit : deposits
+        for (Account deposit : deposits
                 ) {
             res += deposit.toString();
         }
@@ -114,19 +114,19 @@ public class Client {
         this.gender = gender;
     }
 
-    public ArrayList<AbstractAccount> getDeposits() {
+    public ArrayList<Account> getDeposits() {
         return deposits;
     }
 
-    public void setDeposits(ArrayList<AbstractAccount> deposits) {
+    public void setDeposits(ArrayList<Account> deposits) {
         this.deposits = deposits;
     }
 
-    public AbstractAccount getActiveDeposit() {
+    public Account getActiveDeposit() {
         return activeDeposit;
     }
 
-    public void setActiveDeposit(AbstractAccount activeDeposit) {
+    public void setActiveDeposit(Account activeDeposit) {
         this.activeDeposit = activeDeposit;
     }
 }

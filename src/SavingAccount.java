@@ -1,5 +1,5 @@
 
-public class SavingAccount extends AbstractAccount {
+public class SavingAccount extends Account {
 
     public SavingAccount(double balance) {
         super(balance);

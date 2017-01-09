@@ -1,8 +1,8 @@
 
-public abstract class AbstractAccount {
+public abstract class Account {
     double balance;
 
-    public AbstractAccount(double balance) {
+    public Account(double balance) {
         if (balance >= 0) this.balance = balance;
 
 

@@ -1,5 +1,5 @@
 
-public class CheckingAccount extends AbstractAccount {
+public class CheckingAccount extends Account {
     double overdraft;
 
     public CheckingAccount(double balance,double overdraft ) {
